@@ -1,5 +1,5 @@
 [project]
-name = "timeir-unofficial-api"
+name = "timeir-api"
 version = "0.1.0"
 description = "Unofficial Timeir API based-on FastAPI and Python. 🕰 🚀"
 authors = [
@@ -8,7 +8,6 @@ authors = [
 dependencies = [
     "fastapi>=0.112.2",
     "uvicorn>=0.30.6",
-    "scrapy>=2.11.2",
     "nest-asyncio>=1.6.0",
 ]
 requires-python = ">=3.11"
