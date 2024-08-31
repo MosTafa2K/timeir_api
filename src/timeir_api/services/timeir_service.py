@@ -1,14 +1,20 @@
 from bs4 import BeautifulSoup
 import httpx
+from timeir_api.exceptions import TimeOutExc, ConnectionExc
 
 URL = "https://www.time.ir/"
 
 
 async def get_content():
     async with httpx.AsyncClient() as client:
-        response = await client.get(URL)
-        soup = BeautifulSoup(response.text, "html.parser")
-    return soup
+        try:
+            response = await client.get(URL, timeout=1)
+            soup = BeautifulSoup(response.text, "html.parser")
+            return soup
+        except httpx.TimeoutException:
+            raise TimeOutExc()
+        except httpx.ConnectError:
+            raise ConnectionExc()
 
 
 async def get_current_date():
