@@ -4,7 +4,7 @@ from timeir_api.services.timeir_service import get_current_date, get_random_quot
 router = APIRouter()
 
 
-@router.get("/time")
+@router.get("/date/current")
 async def current_date():
     now = await get_current_date()
     return {"date": now}
