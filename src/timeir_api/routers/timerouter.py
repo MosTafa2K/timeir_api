@@ -1,10 +1,10 @@
 from fastapi import APIRouter
-from timeir_api.services.timeir_service import date_parser
+from timeir_api.services.timeir_service import get_current_date
 
 router = APIRouter()
 
 
 @router.get("/time")
-async def get_time():
-    dt = await date_parser()
-    return {"time": dt}
+async def current_date():
+    now = await get_current_date()
+    return {"date": now}
