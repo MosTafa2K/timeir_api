@@ -11,7 +11,7 @@ async def get_content():
     return soup
 
 
-async def date_parser():
+async def get_current_date():
     scraper = await get_content()
     months = [m.text for m in scraper.select("div.dateType span")][:3]
     days = [d.text for d in scraper.select("div.dateText span")][:3]
