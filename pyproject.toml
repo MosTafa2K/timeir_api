@@ -1,7 +1,7 @@
 [project]
 name = "timeir-api"
 version = "0.1.0"
-description = "Unofficial Timeir API based-on FastAPI and Python. 🕰 🚀"
+description = "Unofficial Timeir API based-on FastAPI and Python. ⏰ 🚀"
 authors = [
     {name = "mostafa2k", email = "m2kappswindows8.1@gmail.com"},
 ]
