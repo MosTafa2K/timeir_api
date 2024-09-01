@@ -28,4 +28,5 @@ async def get_current_date():
 async def get_random_quote():
     scraper = await get_content()
     quote_text = scraper.find("div", class_="randomQuote").find("span").text.strip()
-    return quote_text
+    quote_author = scraper.find("div", class_="reverseAlign").find("a").text.strip()
+    return {"text": quote_text, "author": quote_author}
