@@ -13,4 +13,4 @@ async def current_date():
 @router.get("/quote")
 async def random_quote():
     quote = await get_random_quote()
-    return {"RandomQuote": quote}
+    return {"Quote": quote}
