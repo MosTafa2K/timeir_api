@@ -8,7 +8,7 @@ URL = "https://www.time.ir/"
 async def get_content():
     async with httpx.AsyncClient() as client:
         try:
-            response = await client.get(URL, timeout=1)
+            response = await client.get(URL, timeout=5)
             soup = BeautifulSoup(response.text, "html.parser")
             return soup
         except httpx.TimeoutException:
