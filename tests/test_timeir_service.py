@@ -61,9 +61,9 @@ async def test_get_current_date():
 
         assert result is not None
         assert result == {
-            "خورشیدی": "یکشنبه - ۱۱ شهریور ۱۴۰۳",
-            "میلادی": "Sunday - 2024 01 September",
-            "قمری": "الأحد - ٢٧ صفر ١٤٤٦",
+            "solar": "یکشنبه - ۱۱ شهریور ۱۴۰۳",
+            "gregorian": "Sunday - 2024 01 September",
+            "lunar": "الأحد - ٢٧ صفر ١٤٤٦",
         }
 
 
