@@ -24,14 +24,15 @@ The **Timeir API** is an unofficial API for interacting with the [time.ir](https
 
 > Note: You can easily install all requirement packages just using `pdm install` or `pip install -r requirements.txt`
 
+### Install pdm 📥
+`pip install pdm`
+
+
 ## Run ⚡
 First create virtual environment:
 ```bash
 python -m venv venv
 ```
-
-
-# Install pdm 📥
 ### **Active venv:**
 Windows
 ```bash
